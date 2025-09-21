@@ -12,7 +12,7 @@ function App() {
             {data.menu.map((item) => (
                 <div key={item.id}>
                     <Section categoryName={item.category_name} items={item.items} />
-                    {data.menu.length < item.id && <Line />}
+                    {data.menu.length > item.id && <Line />}
                 </div>
             ))}
         </>

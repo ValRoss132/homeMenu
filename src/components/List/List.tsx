@@ -6,7 +6,13 @@ const List: React.FC<{ list: PositionProps[] }> = ({ list }) => {
     return (
         <div className="flex-col">
             {list.map((item) => (
-                <Position key={item.id} name={item.name} description={item.description} prep_time={item.prep_time} />
+                <Position
+                    key={item.id}
+                    name={item.name}
+                    description={item.description}
+                    prep_time={item.prep_time}
+                    ingredients={item.ingredients}
+                />
             ))}
         </div>
     );

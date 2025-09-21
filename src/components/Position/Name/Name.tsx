@@ -1,7 +1,7 @@
 import React from "react";
 
 const Name: React.FC<{ name: string }> = ({ name }) => {
-    return <div className="text-xl font-bold">{name}</div>;
+    return <div className="text-xl font-bold text-left">{name}</div>;
 };
 
 export default Name;
