@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -26,4 +28,10 @@
 
 .read-the-docs {
   color: #888;
+}
+
+h1 {
+  font-family: "Pasifico", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
