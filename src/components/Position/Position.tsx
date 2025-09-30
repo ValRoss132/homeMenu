@@ -1,4 +1,5 @@
 import React from "react";
+
 import Name from "./Name";
 import Description from "./Description";
 import Time from "../Time";
@@ -12,11 +13,11 @@ export type PositionProps = {
     prep_time: { hours: number; minutes: number };
 };
 
-const Position: React.FC<PositionProps> = ({ name, description, prep_time, ingredients }) => {
+const Position: React.FC<PositionProps> = ({ id, name, description, prep_time, ingredients }) => {
     return (
-        <div className="text-left my-7">
-            <Accordion type="single" collapsible>
-                <AccordionItem value="item-1">
+        <div className="flex text-left my-7">
+            <Accordion type="single" collapsible className="w-[100%]">
+                <AccordionItem value={`item-${id}`}>
                     <AccordionTrigger className="hover:no-underline">
                         <div className="flex w-[100%] justify-between gap-2">
                             <div>

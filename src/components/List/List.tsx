@@ -8,6 +8,7 @@ const List: React.FC<{ list: PositionProps[] }> = ({ list }) => {
             {list.map((item) => (
                 <Position
                     key={item.id}
+                    id={item.id}
                     name={item.name}
                     description={item.description}
                     prep_time={item.prep_time}
