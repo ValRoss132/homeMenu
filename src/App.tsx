@@ -1,4 +1,5 @@
 import "./App.css";
+import Header from "./components/Header";
 import Line from "./components/Line";
 import Section from "./components/Section";
 import Title from "./components/Title";
@@ -7,6 +8,7 @@ import data from "./menu.json";
 function App() {
     return (
         <>
+            <Header data={data.menu} />
             <Title />
             <Line />
             {data.menu.map((item) => (
