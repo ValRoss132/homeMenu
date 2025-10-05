@@ -1,7 +1,7 @@
 {
   "menu": [
     {
-      "id": 1,
+      "id": "breakfasts",
       "category_name": "Завтраки",
       "items": [
         {
@@ -203,7 +203,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "soups",
       "category_name": "Супы",
       "items": [
         {
@@ -344,7 +344,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "salads",
       "category_name": "Салаты",
       "items": [
         {
@@ -708,7 +708,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "potato_dishes",
       "category_name": "Блюда из картофеля",
       "items": [
         {
@@ -933,7 +933,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "pasta_dishes",
       "category_name": "Блюда из макарон",
       "items": [
         {
@@ -1156,7 +1156,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "rice_dishes",
       "category_name": "Блюда из риса",
       "items": [
         {
@@ -1233,7 +1233,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "buckwheat_dishes",
       "category_name": "Блюда из гречки",
       "items": [
         {
@@ -1304,7 +1304,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "dumplings_vareniki",
       "category_name": "Пельмени и вареники",
       "items": [
         {
@@ -1389,7 +1389,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": "hot_dishes",
       "category_name": "Горячие блюда",
       "items": [
         {
@@ -1729,7 +1729,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": "pizza",
       "category_name": "Пицца",
       "items": [
         {
@@ -1753,7 +1753,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": "bakery",
       "category_name": "Выпечка",
       "items": [
         {
@@ -1928,7 +1928,7 @@
       ]
     },
     {
-      "id": 12,
+      "id": "desserts",
       "category_name": "Десерты",
       "items": [
         {
@@ -2022,7 +2022,7 @@
       ]
     },
     {
-      "id": 13,
+      "id": "drinks",
       "category_name": "Напитки",
       "items": [
         {
