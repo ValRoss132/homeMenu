@@ -5,7 +5,7 @@ import Description from "./Description";
 import Time from "../Time";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
-export type PositionProps = {
+type PositionProps = {
     id?: number;
     name: string;
     description: string;

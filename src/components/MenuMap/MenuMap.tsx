@@ -30,7 +30,7 @@ const MenuMap: React.FC<MenuMapProps> = ({ data }) => {
                     <ul>
                         {data.map((item) => (
                             <li>
-                                <Link to={item.id}>
+                                <Link to={item.id} smooth>
                                     <DropdownMenuItem>{item.category_name}</DropdownMenuItem>
                                 </Link>
                             </li>

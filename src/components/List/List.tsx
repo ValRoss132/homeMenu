@@ -1,8 +1,8 @@
 import React from "react";
-import type { PositionProps } from "../Position/Position";
 import Position from "../Position/Position";
+import type { IMenuItems } from "../../types/MenuTypes";
 
-const List: React.FC<{ list: PositionProps[] }> = ({ list }) => {
+const List: React.FC<{ list: IMenuItems[] }> = ({ list }) => {
     return (
         <div className="flex-col">
             {list.map((item) => (

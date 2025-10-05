@@ -4,6 +4,7 @@ import Line from "./components/Line";
 import Section from "./components/Section";
 import Title from "./components/Title";
 import data from "./menu.json";
+import { Element } from "react-scroll";
 
 function App() {
     return (
@@ -11,11 +12,11 @@ function App() {
             <Header data={data.menu} />
             <Title />
             <Line />
-            {data.menu.map((item) => (
-                <div key={item.id}>
+            {data.menu.map((item, index) => (
+                <Element key={item.id} name={item.id}>
                     <Section categoryName={item.category_name} items={item.items} />
-                    {data.menu.length > item.id && <Line />}
-                </div>
+                    {data.menu.length > index && <Line />}
+                </Element>
             ))}
         </>
     );

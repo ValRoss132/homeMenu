@@ -1,12 +1,12 @@
 import React from "react";
 import SectionName from "./SectionName";
 import List from "../List";
-import type { PositionProps } from "../Position/Position";
+import type { IMenuItems } from "../../types/MenuTypes";
 
 type SectionProps = {
-    id?: number;
+    id?: string;
     categoryName: string;
-    items: PositionProps[];
+    items: IMenuItems[];
 };
 
 const Section: React.FC<SectionProps> = ({ categoryName, items }) => {

@@ -1,22 +1,10 @@
 import React, { useEffect, useState } from "react";
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import type { PositionProps } from "../Position/Position";
+import MenuMap from "../MenuMap";
 
-import { SquareMenu } from "lucide-react";
+import type { IMenu } from "../../types/MenuTypes";
 
 type HeaderProps = {
-    data: {
-        id: number;
-        category_name: string;
-        items: PositionProps[];
-    }[];
+    data: IMenu[];
 };
 
 const SCROLL_THRESHOLD = 60;
@@ -54,18 +42,7 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
             }`}
         >
             <div className="flex justify-end rootWidth">
-                <DropdownMenu>
-                    <DropdownMenuTrigger className="border-[1px] border-[var(--secondary)] p-1 rounded-sm">
-                        <SquareMenu />
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent>
-                        <DropdownMenuLabel>Карта меню</DropdownMenuLabel>
-                        <DropdownMenuSeparator></DropdownMenuSeparator>
-                        {data.map((item) => (
-                            <DropdownMenuItem>{item.category_name}</DropdownMenuItem>
-                        ))}
-                    </DropdownMenuContent>
-                </DropdownMenu>
+                <MenuMap data={data} />
             </div>
         </header>
     );
