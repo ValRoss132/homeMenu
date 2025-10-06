@@ -15,7 +15,7 @@ function App() {
             {data.menu.map((item, index) => (
                 <Element key={item.id} name={item.id}>
                     <Section categoryName={item.category_name} items={item.items} />
-                    {data.menu.length > index && <Line />}
+                    {data.menu.length > index + 1 && <Line />}
                 </Element>
             ))}
         </>
