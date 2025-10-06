@@ -17,6 +17,8 @@ type MenuMapProps = {
     data: IMenu[];
 };
 
+const TOP_OFFSET = 60;
+
 const MenuMap: React.FC<MenuMapProps> = ({ data }) => {
     return (
         <nav>
@@ -30,7 +32,7 @@ const MenuMap: React.FC<MenuMapProps> = ({ data }) => {
                     <ul>
                         {data.map((item) => (
                             <li>
-                                <Link to={item.id} smooth>
+                                <Link to={item.id} smooth offset={-TOP_OFFSET}>
                                     <DropdownMenuItem>{item.category_name}</DropdownMenuItem>
                                 </Link>
                             </li>
