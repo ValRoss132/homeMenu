@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({ data }) => {
 
     return (
         <header
-            className={`bg-[#0000003f] fixed top-0 left-0 w-[100%] py-3 px-2 transition-transform duration-100 ease-linar ${
+            className={`bg-[#0000003f] backdrop-blur-xxs fixed top-0 left-0 w-[100%] py-3 px-2 transition-transform duration-100 ease-linar ${
                 scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
             }`}
         >
