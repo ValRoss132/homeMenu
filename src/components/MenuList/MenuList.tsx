@@ -1,12 +1,12 @@
 import React from "react";
-import Position from "../Position/Position";
+import MenuPosition from "../MenuPosition/MenuPosition";
 import type { IMenuItems } from "../../types/MenuTypes";
 
-const List: React.FC<{ list: IMenuItems[] }> = ({ list }) => {
+const MenuList: React.FC<{ list: IMenuItems[] }> = ({ list }) => {
     return (
         <div className="flex-col">
             {list.map((item) => (
-                <Position
+                <MenuPosition
                     key={item.id}
                     id={item.id}
                     name={item.name}
@@ -19,4 +19,4 @@ const List: React.FC<{ list: IMenuItems[] }> = ({ list }) => {
     );
 };
 
-export default List;
+export default MenuList;

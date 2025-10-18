@@ -1,7 +1,7 @@
 import React from "react";
 
-import Name from "./Name";
-import Description from "./Description";
+import MenuPositionName from "./MenuPositionName";
+import MenuDescription from "./MenuDescription";
 import Time from "../Time";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -13,7 +13,7 @@ type PositionProps = {
     prep_time: { hours: number; minutes: number };
 };
 
-const Position: React.FC<PositionProps> = ({ id, name, description, prep_time, ingredients }) => {
+const MenuPosition: React.FC<PositionProps> = ({ id, name, description, prep_time, ingredients }) => {
     return (
         <div className="flex text-left my-7">
             <Accordion type="single" collapsible className="w-[100%]">
@@ -21,8 +21,8 @@ const Position: React.FC<PositionProps> = ({ id, name, description, prep_time, i
                     <AccordionTrigger className="hover:no-underline">
                         <div className="flex w-[100%] justify-between gap-2">
                             <div>
-                                <Name name={name} />
-                                <Description description={description}></Description>
+                                <MenuPositionName name={name} />
+                                <MenuDescription description={description}></MenuDescription>
                             </div>
                             <Time time={prep_time} />
                         </div>
@@ -43,4 +43,4 @@ const Position: React.FC<PositionProps> = ({ id, name, description, prep_time, i
     );
 };
 
-export default Position;
+export default MenuPosition;

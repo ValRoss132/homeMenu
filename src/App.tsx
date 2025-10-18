@@ -1,8 +1,8 @@
 import "./App.css";
 import Header from "./components/Header";
-import Line from "./components/Line";
-import Section from "./components/Section";
-import Title from "./components/Title";
+import Separator from "./components/Separator";
+import MenuSection from "./components/MenuSection";
+import MenuTitle from "./components/MenuTitle";
 import data from "./menu.json";
 import { Element } from "react-scroll";
 
@@ -10,12 +10,12 @@ function App() {
     return (
         <>
             <Header data={data.menu} />
-            <Title />
-            <Line />
+            <MenuTitle className="my-20 -mb-11" />
+            <Separator />
             {data.menu.map((item, index) => (
                 <Element key={item.id} name={item.id}>
-                    <Section categoryName={item.category_name} items={item.items} />
-                    {data.menu.length > index + 1 && <Line />}
+                    <MenuSection categoryName={item.category_name} items={item.items} />
+                    {data.menu.length > index + 1 && <Separator />}
                 </Element>
             ))}
         </>
