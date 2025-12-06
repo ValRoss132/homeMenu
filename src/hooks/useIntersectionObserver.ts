@@ -5,19 +5,13 @@ export const useIntersectionObserver = (
 	callback: (id: string) => void,
 	options: IntersectionObserverInit = {
 		// root: null,
-		rootMargin: '0px',
+		rootMargin: '-55% 0px -45% 0px',
 		threshold: 0,
 	}
 ) => {
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
-				console.log(
-					'Observed element:',
-					entry.target.id,
-					'isIntersecting:',
-					entry.isIntersecting
-				)
 				if (entry.isIntersecting) {
 					callback(entry.target.id)
 				}
@@ -27,7 +21,6 @@ export const useIntersectionObserver = (
 		ids.forEach((id) => {
 			const element = document.getElementById(id)
 			if (element) {
-				console.log('Observing element:', id)
 				observer.observe(element)
 			}
 		})
