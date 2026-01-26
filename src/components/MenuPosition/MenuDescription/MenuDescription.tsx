@@ -1,7 +1,13 @@
-import React from "react";
+import React from 'react'
 
-const MenuDescription: React.FC<{ description: string }> = ({ description }) => {
-    return <div className="text-sm text-zinc-300 my-2">{description}</div>;
-};
+const MenuDescription: React.FC<{ description: string }> = ({
+	description,
+}) => {
+	return (
+		<div className='text-sm text-muted-foreground font-light leading-relaxed my-2 max-w-[90%]'>
+			{description}
+		</div>
+	)
+}
 
-export default MenuDescription;
+export default MenuDescription

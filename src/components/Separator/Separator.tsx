@@ -1,7 +1,12 @@
-import type React from "react";
+import type React from 'react'
 
 const Separator: React.FC = () => {
-    return <div data-slot="separator" className="m-auto my-20 w-[20vw] h-[0.5px] rounded-2xl bg-white"></div>;
-};
+	return (
+		<div
+			data-slot='separator'
+			className='mx-auto my-24 w-full h-[1px] bg-border/30'
+		/>
+	)
+}
 
-export default Separator;
+export default Separator
