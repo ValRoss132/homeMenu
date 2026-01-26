@@ -1,27 +1,30 @@
-import React from "react";
-import MenuMap from "../MenuMap";
+import React from 'react'
+import MenuMap from '../MenuMap'
 
-import type { IMenu } from "../../types/MenuTypes";
-import { useScrollDirection } from "@/hooks/useScrollDirection";
+import { useScrollDirection } from '@/hooks/useScrollDirection'
+import type { IMenu } from '../../types/MenuTypes'
 
 type HeaderProps = {
-    data: IMenu[];
-};
+	data: IMenu[]
+}
 
 const Header: React.FC<HeaderProps> = ({ data }) => {
-    const scrollDirection = useScrollDirection();
+	const scrollDirection = useScrollDirection()
 
-    return (
-        <header
-            className={`bg-[#0000003f] backdrop-blur-xxs fixed top-0 left-0 w-[100%] py-3 px-2 transition-transform duration-100 ease-linar ${
-                scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
-            }`}
-        >
-            <div className="flex justify-end rootWidth">
-                <MenuMap data={data} />
-            </div>
-        </header>
-    );
-};
+	return (
+		<header
+			className={`fixed top-0 left-0 w-full z-50 py-4 px-6 transition-all duration-500 border-b border-border/10
+                ${scrollDirection === 'down' ? '-translate-y-full' : 'translate-y-0'}
+                bg-background/80 backdrop-blur-md`}
+		>
+			<div className='max-w-6xl mx-auto flex justify-between items-center'>
+				<div className='text-[10px] uppercase tracking-[0.4em] font-black text-primary'>
+					The Menu
+				</div>
+				<MenuMap data={data} />
+			</div>
+		</header>
+	)
+}
 
-export default Header;
+export default Header
